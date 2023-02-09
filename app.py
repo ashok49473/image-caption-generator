@@ -13,7 +13,7 @@ base_prompt = "rewrite the given image caption in five different ways: \n"
 
 # To get multiple captions using the original caption
 def run_gpt3(caption):
-    time.sleep(5)
+    time.sleep(10)
     response = openai.Completion.create(
         model="text-davinci-003", prompt=base_prompt+caption+'.', temperature=0.7, max_tokens=650)
     return response.choices[0].text
